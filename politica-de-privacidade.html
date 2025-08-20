@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - Palavrinha</title>
+    <style>
+        :root {
+            --cor-fundo: #ffffff;
+            --cor-texto: #1a1a1b;
+        }
+
+        body.dark-mode {
+            --cor-fundo: #2c2c2e;
+            --cor-texto: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to bottom right, #eb984d, #3d9fc1);
+            background-attachment: fixed;
+            color: var(--cor-texto);
+        }
+        
+        body.dark-mode {
+            background: linear-gradient(to bottom right, #2c1e4e, #1c3a5e);
+            background-attachment: fixed;
+        }
+
+        .container {
+            background-color: var(--cor-fundo);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .header img {
+            width: 250px;
+            height: auto;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        h1, h2 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" title="Voltar ao Jogo">
+                <img id="logo-image" src="palavrinha.svg" alt="Logótipo Palavrinha">
+            </a>
+        </div>
+        <h1>Política de Privacidade para o Palavrinha</h1>
+        <p>A sua privacidade é importante para nós. Esta política de privacidade explica que dados pessoais o Palavrinha recolhe e como são utilizados.</p>
+
+        <h2>Dados que Recolhemos</h2>
+        <p>O Palavrinha utiliza a funcionalidade de armazenamento local (localStorage) do seu navegador para guardar informações que melhoram a sua experiência de jogo. Estes dados incluem:</p>
+        <ul>
+            <li>As suas estatísticas de jogo (jogos jogados, vitórias, sequências).</li>
+            <li>O seu progresso no jogo diário, para que possa continuar mais tarde.</li>
+            <li>As suas preferências, como o tema (claro/escuro), o modo de alto contraste e o idioma (PT-PT/PT-BR).</li>
+        </ul>
+        <p>Estes dados são guardados exclusivamente no seu dispositivo e não são transmitidos para nenhum servidor externo.</p>
+
+        <h2>Google AdSense e Cookies</h2>
+        <p>Este site utiliza o Google AdSense para apresentar anúncios. O Google, como fornecedor de terceiros, utiliza cookies para exibir anúncios com base nas suas visitas a este e a outros sites na Internet.</p>
+        <ul>
+            <li>O uso do cookie DART pelo Google permite que ele exiba anúncios aos nossos utilizadores com base na sua visita ao nosso site e a outros sites na Internet.</li>
+            <li>Pode optar por não utilizar o cookie DART visitando a política de privacidade da rede de anúncios e conteúdo do Google.</li>
+        </ul>
+        <p>Para mais informações sobre como o Google utiliza os seus dados, por favor consulte a <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Política de Privacidade e Termos do Google</a>.</p>
+
+        <h2>Contacto</h2>
+        <p>Se tiver alguma questão sobre esta política de privacidade, pode contactar-nos através do email: <a href="mailto:electronyric@gmail.com">electronyric@gmail.com</a>.</p>
+        
+        <p><em>Esta política foi atualizada pela última vez em 20 de agosto de 2025.</em></p>
+    </div>
+
+    <script>
+        const logoImage = document.getElementById('logo-image');
+        logoImage.addEventListener('contextmenu', (e) => e.preventDefault());
+
+        // Aplica o tema correto ao logótipo
+        const savedTheme = localStorage.getItem('palavrinhaTheme') || 'light';
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            logoImage.src = 'palavrinha-night.svg';
+        }
+    </script>
+</body>
+</html>
