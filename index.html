@@ -407,8 +407,8 @@
             <div id="stats-container">
                 <div class="stat"><span id="stat-played" class="stat-value">0</span><span class="stat-label">Jogados</span></div>
                 <div class="stat"><span id="stat-wins" class="stat-value">0</span><span class="stat-label">Vitórias %</span></div>
-                <div class="stat"><span id="stat-current-streak" class="stat-value">0</span><span class="stat-label">Seq. Atual</span></div>
-                <div class="stat"><span id="stat-max-streak" class="stat-value">0</span><span class="stat-label">Melhor Seq.</span></div>
+                <div class="stat" id="current-streak-stat"><span id="stat-current-streak" class="stat-value">0</span><span class="stat-label">Seq. Atual</span></div>
+                <div class="stat" id="max-streak-stat"><span id="stat-max-streak" class="stat-value">0</span><span class="stat-label">Melhor Seq.</span></div>
             </div>
             <div id="distribution-graph">
                 <h3>Distribuição de Tentativas</h3>
@@ -672,6 +672,7 @@
                     answers_br_6: 'fgfn}tfgfozwfgfqfwfgfsfwfgfwhffgfyjwfgjqmffgjwytfgwfìtfgwnltfhfgfwfhæhnffhfsmtfhfyfwfhjsfwfhjsytfhjwgtfhjwhffhjwytfhjw{tfhjxxtfhmjlffhmjltfhnijfhtwitfìÿhfwfhzinwfhzxfwfiælntfijofwfijsitfijuytfijwnwfijxètfinfitfinìètfinyfwfitwfwfitwstfityfwfizqytfiznwfkflfwfkæ{jqfkjyfwfknfitfknsfqfknsfwfknshtfkn}fwfkqnytfkqznwfkqz}tfktlfwfktnytfktwwtfljsyjflntyfflnyfwfltxytfltzwtflwfitflwf{tflwnètflzqmffozifwfozxyjfqflfwfqfwijfqfwrjfqìfifæqhttqfqht{ffqijnffqjlfwfqjlwjfqjlwtfqjwyffqkfhjfqkfkffqlfìtfqljrffqlzîrfqlzrffqmjntfqnfitfqnsmffqnsmtfqò{ntfqrfìtfqrjoffqrjotfqrtìtfqthfwfqtofwfqtslffqyzwffqzfitfqzlfwfqzòitfqzsfwfqzxètfq{zwffrfitwfrfsmèfrfsmtfrfsyjfrfwfqfrfwltfrfwwffrfxxtfræ{jqfrjfìffrjfìtfrjn}ffrjsitfrtqfwfrùsnffrtsytfrtwfqfrufwtfrutqffrzfitfsfqkffshnètçshtwffsifìtfsifitfsifnffsifqffsjqfwfsjrnffsj}fwçsktwffslnhtfslnsfçslzqtfsnrfqfsnrfwfstyfwfsxjntfsxnfwçsxnfxfsyjsffsynlffsynltfszqfwfuflfwfufsmffufsmtfufwfwfufwyjfufynffujlfwfujqfwfujsfxfujsxtfujwytfujxfwfunyfwfutnfwfutxyffutxytfuwjìtfuwtfwfuwzrtfuzwfwfvzjqffvzjqjfvznqtfwfitwfwfljrfwfsmffwfzytfwhfiffwinitfwjofwfwjslffwjxyffwkfiffwlnqffwltqffwlznwfwnxhtfwrfiffwrfitfwtrfwfwujotfwutfwfwwfnffwwfxffwwfxtfwwjfwfwwjiffwwjntfwwnfwfwwngffwwnrtfwwtgffwwtntfwwtotfwwtyjfwwtytfwwzktfwwzrtfwynltæw{twjfxnqfwfxsnhjæxujwtfxxfitfxxjntfxxtfwfxxtrtfxyzytfyfhfwfyfqmtfyfvzjfyf{ntfynìfwfyn{fwfyqjyffytwjxfywfxtfyzwfwfzwtwffzyzfwf{fsyjf{fwnff{jsìff{nxfwf{n{fwf{zqxtf}ntrffjifwfjnyjfzqfwgfgfhfgfgfitgfgtxfgfhfsfgfhmfwgfhnfqgæhzqtgfifqtgfkfkægflfìtgfnfsfgfnfstgfnqfwgfnsmfgfnwwtgfnzhfgfn}fwgfqfìtgfqfifgfqhètgfqintgfqjnfgfqjqfgfqnitgfqnfgfqxçrgfrgtqgfsfsfgfshfwgfsnitgfssjwgfsfwgfwfyfgfwfytgfwhfwgfwlfsgfwrfsgfwwètgfwwfwgfwwnqgfxjfwgæxnhtgfxyètgfxyfwgfyfyfgfynifgfynitgfynsfgfytyfgfyzhfgfyzyfgfzhfgïgfitgjgnifgjnofwgjqjfgïsìètgjsjwgjøhntgjwnqtgjwwfwgjyzrjgj}nlfgògqnfgngthfgnhfifgnhzitgnjsfqgnltyfgnqmètgnqmfwgntrgtgòujijgnwzyfgnxf{øgnxf{ùgnytqfgqjkfwgqtlzjgqzxètgtgjfwgtgthfgthfifgthfitgthjotgtijlfgtqfifgtqjnfgtqjytgtqmfwgøqnitgtqtyfgtrgtrgtsjhfgtsjhtgtsnyfgtsnytgtwiètgtwifwgtwwètgtwwfwgtxvzjgtyjhtgtynhfgtynofgtynsfgt{nstgwfifwgwfrnwgwfshfgwfshtgwfsifgwfsitgwfxètgwjhmfgwjvzjgwnlfwgwnqmtgwnshtgwnsijgwntxtgwnyfwgwthfwgwthmjgwtshfgwtshtgwtsjgwtyfwgwzìtxgwzxhtgwzyfqgÿkfqtgzwfhtgzwqfwgzxhfwgznsfhfgfìfhfgfìthfgfqfhfgfsfhfgjìfhfgjìfhfgjqthfgnijhfgnsfhfgnsjhfgwèthfhjyjhfhnkthfìtfwhfìzqfhfijnfhfijqfhfijyjhæirnthfizhthfkzsîhælfithfnfithfngwthfn}èthfofithfqfithfqhfwhfqìfwhfqìfxhæqhnthfqmfwhæqnhjhfqtyfhfqtyjhfrfifhçrfwfhçrgnthfrjqthçrjwfhfrnxfhfruzxhfsfuîhfshfshfsìèthçshjwhfshmfhfshwthfsjhfhfsjhthfsjqfhfsjyfhfsmèthfsnìthçstsjhfsxfwhfsyfwhfsynqhfsytwhfszithfufithfujqfhfujyfhfutyfhfutyjhfuyfwhfwjhfhfwjyfhfwsfqhfwtìthfwtqfhfwtsfhfwunwhfwwnqhfwyèthfwyfhfwyjqhfw{èthfxfhfhfxfhthfxxfwhfxytwhfxzfqhfxzqthfyjythfyn{thfzgønhfzìèthfzxfwhf{fhthf{fithf{fqthf{nfwhjgtqfhîizqfhîqzqfhjsxtwhjsywthjwhfwhjwjofhjwwfwhjwnwhjxxfwhmfrfwhmfuîzhmfwhthmfwrjhmfxxnhmf{èthmjhfwhmjlfwhmjnwthmjvzjhmjwsjhmnfithmnkwjhmnvzjhmnxufhmthfwhmthmthmtkwjhmtvzjhmtwèthmtwfwhmt{jwhmzhmzhmzrgthmzufwhmzyfwhnhzyfhnifijhnjsyjhnkwfwhnlfsfhnlfsthnsjrfhnsjqhnxhfwhòyfwfhò{nhthqfrfwhqfrtwhqfwèthqfwnrhqfxxjhqnhmïhqòrf}htfìèthtflnwhtf}fwhtgfnfhtgnìfhtgwfwhtgwnwhøhjlfhøinlthtjqmthtngnwhtqhmfhtqiwjhtqjlfhøqjwfhtqjyfhtqjyjhtqmjwhøqnhfhtqnsfhtqzsfhtrjìthtrjyfhtrnifhtrnlthtrnyïhùrtifhùrtithtrutwhtruwfhtrzsfhtshmfhtsièthtsitwhtsknrhùsnhthùsxzqhtsyfwhtsyfxhtsyjwhtsywfhts{îxhtunfwhøuzqfhtwhjqhtwièthtwjythtwtfwhtwwjwhtwyfwhtwyïxhtwzofhtxyfxhwfhmæhwçsnthwfvzjhwfxxthwjitwhwjrfwhwjsìfhwjxuthwnfithwnuyfhwnxrfhwnxyfhwtvznhwzfwhznifwhzqufwhzsmfwhzunithÿuzqfhzwwfqhzw{fwhzxunwhzxyfwiæin{fifsfitifsìfwijgfyjiîgnytiîhfifiîhnrtijhtwtijhtyjijkjxfijkjxtijlwfzijnyfwijn}fwijqknrijqnytijrfnxijrtwfijsywtijwn{fijxhjwijxiîrijxjotijxt{fijxunwijxywfijxzxtijx{ntijywæxij{nitij{tytijjsfinfsyjinæwntinqjrfinqznwinxutwinyfitinzwstiò{nifin{nstin{nxfiònrtitgwfwitìzwfitjsìfitjsyjitrnsøitwrnwitxxnïityfititzwfwitzytwiwflètizgqfwizjsijizwjfiÿ{nifjinìètjinyfqjinyfwjinytwjizhfwjkjnytjknhfjojyfwjqjljwjqjshtjqj{fwjqnuxjjqn}nwjqtlntjrgfyjjrgtwfjrjsifjrnynwjrtìètjrufifjrufyjjrutqfjrzqfwjshmjwjskfitïskfxjjsknfwjslfstjslznfjsotfwjsqfhjjsqjntjsqj{tjstwrjjswjitjsxfntjsxjotjsxnstjsytfwjsywfwjs{nfwjs}fifjs}frjjs}zytjvznujjwæwntjwjìètjwlzjwjwtxètjwwfitjxgtìtjxhfifjxhfqfjxhfrfjxhfujjxhtqfjxhtwfjxht{fjxhzitjxhzsfjxhzwtjxkjwfjxltytjxrtqfjxstgjjxufìtjxufifjxujwfjxujytjxunètjxunfwjxunlfjxutwfjxutxfjxutxtjxuzrfjxyfhfjxyfitjxyfkfjxyjntjxyjofjxyjyfjxyj{fjxytktjxytotjxytqfjxytufjxyzitjxyzkfjyjwstj{finwj{fxètj{jsytj{nyfwj{thfwj}fqfwj}hjytj}ngnwj}nlnwj}òlztj}nqfwj}òqntj}òrntj}ujwyï}yfxjkægzqfkfhìètkfhjyfkfnxètkfòxhfkfozytkfqhètkfqmfwkfqyfwkfrtxtkfwjqtkfxyntkfynfwkfyzwfkfzxytkf{jqfkf}nsfkjgwnqkjhmfwkjnoètkjnyntkjnytwkjqywtkjsijwkîwnfxkjwnifkjwnitkjwwètkjwwfwkîwwjtkîwynqkjw{jwkjw{twkjxynrkîynitknfsìfknhìètkòlfitknlzwfknqnfqknqrfwknqywtknshfwknsifwknsjfknslnwknxhfqkòxnhfkòxnhtkn{jqfkqfzyfkqjwyjkqj}ètktkthfkùqjltktqlfwktqnètktwìfwktwofwktwrfqktwrfwktwwfwkøxxnqkwfìètkwælnqkwfqifkwfshtkwfsltkwfsofkwfxhtkwfzijkwjhmfkwjnwfkwjsyjkwjxhtkwjxyfkwjyfwkwnxfwkwnyfwkwnfwkwtsmfkwtz}tkzqfstkzqhwtkzqltwkzrfìfkzsìètkzsifwkzsinwkzsitxkzwyfwlfnfytlfntqflfqjltlfqjwflfqlfwlfqtujlfquètlçrgnflfrjyflfshmtlfsmfwlfwfuflfwìtrlfwtyflfwtytlfxyfwlfyzstlfÿhmtlf{jyflf{nètlfjqfljqfitljqjnfljrfifljrnitljsnfqljsynqljxyètljxytwlnqjyjlnslfwlnwfkflqtgfqlqøwnflqÿyjsltwnqfltxyfwløynhtlwfknflwfqmflwfrutlwfsijlwæynxlwfÿitlwf{fwlwjqmflwïrntlwnyfwlwtxxtlzfwiflzjn}flzjqwflzjwwflznhmïlzniètmægnytmfhpjwmæqnytmfqyjwmfslfwmfwunfmf{fsfmîqnhjmjwifwmjwijnmj}fstmntnijmòunhtmnuunjmøvzjnmtxyjqmtxynqmzrfstmÿxxfwnintrfnintyfniùsjtnlwjofnlzfsfnqjlfqnqmfitnqmtyfnqzxètnrfljrnrjsxtnrjwxtnrnyfwnrø{jqnrujijòrujytòrujytnsjwyjnskfrjnsknjqòsknrtnslqïxnst{fwnsxjytnsxyfwnsxzqfnsxzrtòsynrtnsyznwnsÿynqns{jofnwtsnfnxjsytnxtutwnyjwfwnyzfstofgzwzofgzynofhfwîofwlètofxrnrof{fqnofnifojwnhtojwn{æongtnfotjqmtotlfifoøvzjnotwsfqotwwfwoÿgnqtozozgfozqlfwozsìètoÿsntwozsyfwozwfitozwjrfozwnynpfgzpnpfnxjwpjq{nspnrtstpqf}tsqfgnfqqægntxqfhwfwqfhyfwqæhyjtqfhzsfqfinstqflzsfqfrgjwqçrnsfqfsìfwqfshmfqfshmjqfsifzqfwnhfqfxhfwqfxywtqfynstqf{fgtqf{fitqf{wfxqf~tzyqjlfitqjlfytqjlnètqjnqètqjnytwqjxfitqjxn{tqj{fitqj{jfqngjqtqògjwtqògnhtqnlfitqnrnyjqnrufwqòslzfqnspfwqnxzwfqn{wfwqn}fitqølnhtqtsywfqtz{fwqÿinhtqzsjyfqzunstqzxywtrfhfhtrfìfifrfìfitrfhjyjrfhmètrfhnìtrfhnjræhzqfrfifrjrfizwtrælnhfrælnhtrfltfwrfltyjrfqflzrfqfytrfqj{trfqjfrfqmfwrfqthfrfqtyjrfqzhtrfrfyfrfrzyjrfsfifrfshfqrfshfwrfshmfrfsiètrfsifwrfsjotrfsjyfrfslzjrfsofwrfsxètrfsyjwrfszfqrfujfwrfwhfwrfwhmfrfwljrrfwnitrfwnsfrfwtqfrfwtytrfwwtrræwynwrfxhfwrfxywtrfywnrfyzytræ}nrfræ}nrtrf}n}jrfjqfrjinfwrîinhfrîinhtrjinifrjizxfrjqfitrjqjhfrjqmtwrjrgwtrjsnsfrjsnstrjsxfqrjsyfqrjsynwrjsytwrîwnytrjxfifrjxywfrjxywjrjyfijrîytitrj}nitrnlwfwrnqmètrnqmfwròrnhfrnrtxtrnslfzròslzfròsnrfròsnrtrnszyfrnszytrntunfrnxxètròxxnqrnxyjwrtfljrrtijqtrøizqtrtjsifrtkfitrtnsmtrtqifwrtqjotrtqjfrtqmfwrtsyfwrtwijwrtwjsfrtwjstrtwlzjrtwwjwrtwyfqrtxywfrtyn{trø{jnxrzfrgfrzifitrzqfyfrzqfytrzqjyfrzqmjwrzqyfwrzwhmfrzwhmtrÿxnhfrÿxnhtsfyn{fsfyn{tsæzxjfsîhyfwsòvzjqsòynitst{fyfst{fytst{jqfst{jqtstfifsÿrjwtszywnwtgojyttgyzxtthjfstthntxtthzufwtkjlfwtkjsxftkjwyftkòhnttqfwnftqjtxttqmfiftrnynwtsjwfwtujwfwtunsfwtutxyttwfìèttwfitwøwgnyftwnljrtzytsttzywjrt{jqmfufiwètuælnsfufltijufnsjqufnwfwufn}ètufqjyfufqjytufqnytufsjqfuçsnhtufufnfufwfifufwfitufwjijufwvzjufwynwuæxhtfufxrfwufxxfwufxyjqufxytwufyjyfufynkjuæynsfufywètufywtfufzyfwujhfitujifìtujqfitujsmtwujsxètujsxfwujunstujwiètujwijwujwknqujwnltujwnytuîwtqfujwzhfujxfitujxhfwujxxtfuîyfqfujyjhfunhqjxunhtqîunjlfxunofrfunqmfwunqtytunshjqunslfwunsmètunsyfwunsytwuntqmtuntwfwunuthfunwfyfunxhfwunxyètunyfifun{jyjuqfsfwuqfsyfuqfxrfutjnwfutjsyjutjxnfutqnitutrgfquøvzjwutwìètutwknfutwvzjutwvzïutwyètutwyfwutxyfqutxyfwuùxyjwutzufwutzxfwut{tfwuwfsytuwfjwuwjlfwuwïrntuwjsifuwjsxfuwjxxfuwj{jwuwjfwuwnrtwuwnxètuwn{fwuwtjfuwtsytuwtutwuwt{fwuzqrètuzunqfuzwjfvzfiwfvzfiwtvzfsitvzfsytvzfwyfvzfwytvzjgwfvzjgwtvzjnotvzjnrfvzjn}fvzjn}tvzjsyjvzjwjwvznjytvznsyfvznsytvznsjvznxytvznyfwwfhmfwwfinfqwfqmfwwfshmtwfsljwwæunitwfunsfwfutxfwfuytwwfxlfwwfxywtwjfìètwjflnwwjhfitwjhngtwjhnkjwjhzfwwjkwètwjlnètwjlnrjwjnytwwjqfytwjqj{twjrtjwwjsijwwjstrjwjufwtwîuynqwjvzjwwjxnsfwjxzrtwjynsfwjynwtwjzsnwwnfhmtwòlnitwnxfifwnxhfwwnyzfqwtififwtifuîwtijntwtqjyfwtrujwwtshfwwtynsfwøyzqtwtzgfwwtzuètwzknètxægfitxfhtqfxfqfifxfqfrjxfqlfwxfqn{fxfqrètxfqyfwxfq{fwxfslzjxfufytxfzifwxjhzwfxjitxtxjlznwxjlzwtxjrfsfxjrjfwxjruwjxjsfitxjsmtwxjsxtwxjsyfwxjsynwxjwjnfxjwjstxjwrètxjw{nwxjxxètxj{jwtxòqfgfxnwjsjxnyzfwxtgwfwxøgwntxthnfqxtkwjwxtqjsjxøqnitxtqyfwxtqzìtxtrgwfxtsfyfxtsifwxtsjhfxtsjytxtsmfwxtstwtxtuwfwxtwwnwxzgnifxÿgnytxzgynqxzhfyfxzhzwnxzîyjwxzkn}txzkthtxzqyètxzrnìtxzwkfwxzwlnwxzwyfwxzxyfwxzyzwfyfgfhtyfgjqfyfgqjyyfqmjwyfq{jyfrgtwyfrufwyfsvzjyfujyjyfwifwyfwjkfyfwnkfyjfywtyjhnityjnrfwyjruqtyjsyfwyjtwnfyjwwtwyjxyfwyòrnityòyzqtytfqmfytwhjwytwsfwytxxnwyø}nhtywfìfwywflfwywfofwywfrfwywfsìfywfyfwywfytwywf{fwywfjwywjrjwywjrtwywngfqywnqmfywnqmtywnshfywnsyfywnuqtywnxyjywthfwywtkîzywtrgfywtshtywzvzjyzhfstyÿsnhfzòxvzjÿqynrfÿqynrtzsnifxzsnitxzsnsitzsnwfrzsnwjxzwgfstzxfwnfzxæ{jq{fhnqf{fhnqt{fhnsf{fijfw{finfw{flfit{fqjyf{fqjyj{æqnit{fqnxj{fqxfw{fwjot{fwjyf{fwnfw{æwntx{fwwjw{jlfst{jljyf{jqzit{jshjw{jsifx{jsijw{jsjst{jsyfw{jsywj{jwgfq{jwijx{jwjif{jwjif{jwsn{jwxèt{jwxèt{jwxtx{jwyjw{jxynw{jxynw{jxynz{jyfit{j}frj{j}frj{nfljr{nfljr{nfofw{ngwfw{njwfr{njxxj{nlnfw{nqjf{nslfw{nsmfr{nsmfx{ntqèt{nwfif{nwfit{nxnyf{nxnyf{nxzfq{nyjqf{òynrf{n{jf{n{nit{tfitw{tqyfw{tqyfw{tqytz{tqzrj{ùrnyt{tyfit{zqhèt{zqlfw}fiwj}flzèt}fwfif}fwtuj}f{jht}f}fit}jnvzj}jwjyf}jwnkj}òhfwf}nslfwfslètfslfwfsfwfujfwfwufwjqtxtïsnyjjwfitjwfitnltytnqmèttjnwftrgfwzrgnwzrgnxzsnitzwwfwzwwfw'
                 };
 
+
                 function decode(text) {
                     const shift = 5;
                     let result = '';
@@ -841,8 +842,9 @@
             }
 
             // --- LÓGICA DE ESTATÍSTICAS E MODAL ---
-            function loadStats() {
-                const stats = JSON.parse(localStorage.getItem('palavrinhaStats')) || {
+            function loadStats(mode) {
+                const key = mode === 'daily' ? 'palavrinhaStatsDaily' : 'palavrinhaStatsInfinite';
+                const stats = JSON.parse(localStorage.getItem(key)) || {
                     played: 0,
                     wins: 0,
                     currentStreak: 0,
@@ -855,35 +857,68 @@
                 return stats;
             }
 
-            function saveStats(stats) {
-                localStorage.setItem('palavrinhaStats', JSON.stringify(stats));
+            function saveStats(stats, mode) {
+                const key = mode === 'daily' ? 'palavrinhaStatsDaily' : 'palavrinhaStatsInfinite';
+                localStorage.setItem(key, JSON.stringify(stats));
             }
 
             function showStatsModal(isEndGame, didWin = false) {
-                let stats = loadStats();
-                if (isEndGame && GAME_MODE === 'daily') {
-                    const dailyState = JSON.parse(localStorage.getItem('palavrinhaDailyState'));
-                    const today = new Date().toISOString().split('T')[0];
-                    if(!dailyState || dailyState.date !== today || dailyState.status === 'inprogress') {
-                        stats.played += 1;
-                        if (didWin) {
-                            stats.wins += 1;
-                            stats.currentStreak += 1;
-                            if (stats.currentStreak > stats.maxStreak) stats.maxStreak = stats.currentStreak;
-                            stats.guessDistribution[currentRowIndex]++;
-                        } else {
-                            stats.currentStreak = 0;
+                const modeToShow = isEndGame ? GAME_MODE : 'daily';
+                let stats = loadStats(modeToShow);
+                
+                if (isEndGame) {
+                    const statsToUpdate = loadStats(GAME_MODE); // Carrega as estatísticas do modo que acabou de ser jogado
+                    if (GAME_MODE === 'daily') {
+                        const dailyState = JSON.parse(localStorage.getItem('palavrinhaDailyState'));
+                        const today = new Date().toISOString().split('T')[0];
+                        if(!dailyState || dailyState.date !== today || dailyState.status === 'inprogress') {
+                            statsToUpdate.played += 1;
+                            if (didWin) {
+                                statsToUpdate.wins += 1;
+                                statsToUpdate.currentStreak += 1;
+                                if (statsToUpdate.currentStreak > statsToUpdate.maxStreak) {
+                                    statsToUpdate.maxStreak = statsToUpdate.currentStreak;
+                                }
+                                statsToUpdate.guessDistribution[currentRowIndex]++;
+                            } else {
+                                statsToUpdate.currentStreak = 0;
+                            }
+                            saveStats(statsToUpdate, 'daily');
                         }
-                        saveStats(stats);
+                    } else { // Modo Infinito ou Desafio
+                        statsToUpdate.played += 1;
+                        if (didWin) {
+                            statsToUpdate.wins += 1;
+                        }
+                        saveStats(statsToUpdate, 'infinite');
                     }
+                    stats = loadStats(modeToShow); // Recarrega as estatísticas para garantir que a UI mostra os dados mais recentes
                 }
                 
+                // Configuração da UI do Modal
                 const modalTitle = statsModal.querySelector('#modal-title');
+                const currentStreakStat = document.getElementById('current-streak-stat');
+                const maxStreakStat = document.getElementById('max-streak-stat');
+                const distributionGraph = document.getElementById('distribution-graph');
+
+                if(modeToShow === 'daily') {
+                    modalTitle.textContent = "Estatísticas (Palavra do Dia)";
+                    currentStreakStat.classList.remove('hidden');
+                    maxStreakStat.classList.remove('hidden');
+                    distributionGraph.classList.remove('hidden');
+                } else { // infinite or challenge
+                    modalTitle.textContent = "Estatísticas (Modo Infinito)";
+                    currentStreakStat.classList.add('hidden');
+                    maxStreakStat.classList.add('hidden');
+                    distributionGraph.classList.add('hidden');
+                }
+                
+                const gameEndTitle = statsModal.querySelector('#modal-title'); // Este é o título principal (Parabéns, etc.)
                 const wordReveal = statsModal.querySelector('#modal-word-reveal');
                 const countdownContainer = statsModal.querySelector('#countdown-container');
 
                 if (isEndGame) {
-                    modalTitle.textContent = didWin ? "Parabéns!" : "Fim de Jogo";
+                    gameEndTitle.textContent = didWin ? "Parabéns!" : "Fim de Jogo";
                     statsModal.querySelector('#modal-correct-word').textContent = secretWord;
                     wordReveal.classList.remove('hidden');
                     shareButton.classList.remove('hidden');
@@ -898,21 +933,24 @@
                         countdownContainer.classList.add('hidden');
                     }
                 } else {
-                    modalTitle.textContent = "Estatísticas";
+                    // Se não for fim de jogo, o título já foi definido acima
                     wordReveal.classList.add('hidden');
                     shareButton.classList.add('hidden');
                     playAgainButton.classList.add('hidden');
                     countdownContainer.classList.add('hidden');
-                    menuButton.classList.remove('hidden'); // CORREÇÃO: Mostrar o botão de menu
+                    menuButton.classList.remove('hidden');
                 }
                 
+                // Preenche os valores com as estatísticas corretas
                 statsModal.querySelector('#stat-played').textContent = stats.played;
                 const winPercentage = stats.played > 0 ? Math.round((stats.wins / stats.played) * 100) : 0;
                 statsModal.querySelector('#stat-wins').textContent = winPercentage;
                 statsModal.querySelector('#stat-current-streak').textContent = stats.currentStreak;
                 statsModal.querySelector('#stat-max-streak').textContent = stats.maxStreak;
                 
-                drawDistributionGraph(stats.guessDistribution, isEndGame && didWin ? currentRowIndex : -1);
+                if(modeToShow === 'daily') {
+                    drawDistributionGraph(stats.guessDistribution, isEndGame && didWin ? currentRowIndex : -1);
+                }
                 
                 statsModal.classList.remove('hidden');
             }
