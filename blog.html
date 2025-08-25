@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Palavrinha</title>
+    <style>
+        :root {
+            --cor-fundo: #ffffff;
+            --cor-texto: #1a1a1b;
+        }
+
+        body.dark-mode {
+            --cor-fundo: #2c2c2e;
+            --cor-texto: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to bottom right, #eb984d, #3d9fc1);
+            background-attachment: fixed;
+            color: var(--cor-texto);
+        }
+
+        body.dark-mode {
+            background: linear-gradient(to bottom right, #2c1e4e, #1c3a5e);
+            background-attachment: fixed;
+        }
+
+        .container {
+            background-color: var(--cor-fundo);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .header img {
+            width: 250px;
+            height: auto;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+        
+        h1, h2 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        
+        .post-list a {
+            text-decoration: none;
+            color: var(--cor-texto);
+        }
+
+        .post-entry {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .post-entry h2 {
+            margin: 0 0 5px 0;
+            font-size: 1.5rem;
+        }
+
+        .post-entry h2:hover {
+            color: #007acc;
+        }
+
+        .post-meta {
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" title="Voltar ao Jogo">
+                <img id="logo-image" src="palavrinha.svg" alt="Logótipo Palavrinha">
+            </a>
+        </div>
+        <h1></h1>
+        <p>Curiosidades, etimologia e a história por detrás das palavrinhas.</p>
+
+        <div class="post-list">
+            <div class="post-entry">
+                <a href="posts/2025-08-25.html">
+                    <h2>#1 A Palavrinha de 24/08/2025 🇵🇹 FATAL</h2>   
+                </a>
+                <div class="post-meta">Publicado a 25 de agosto de 2025</div>
+            </div>
+            </div>
+
+        <p><a href="index.html">Voltar ao Jogo</a></p>
+    </div>
+
+    <script>
+        const logoImage = document.getElementById('logo-image');
+        logoImage.addEventListener('contextmenu', (e) => e.preventDefault());
+
+        const savedTheme = localStorage.getItem('palavrinhaTheme') || 'light';
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            logoImage.src = 'palavrinha-night.svg';
+        }
+    </script>
+</body>
+</html>
