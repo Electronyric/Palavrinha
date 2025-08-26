@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palavrinha #5: NUNCA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom right, #eb984d, #3d9fc1);
+            background-attachment: fixed;
+            transition: background-color 0.3s ease;
+        }
+        /* Estilos para o Modo Escuro */
+        body.dark-mode {
+            background: linear-gradient(to bottom right, #2c1e4e, #1c3a5e);
+        }
+        body.dark-mode .post-container {
+            background-color: #2c2c2e;
+            color: #f1f5f9;
+        }
+        body.dark-mode .post-container h1,
+        body.dark-mode .post-container h2 {
+            color: #ffffff;
+        }
+        body.dark-mode .post-container .post-meta {
+            color: #94a3b8;
+        }
+        body.dark-mode .post-container a {
+            color: #60a5fa;
+        }
+        body.dark-mode .post-container blockquote {
+            border-left-color: #60a5fa;
+            background-color: #374151;
+        }
+        .post-content a {
+            text-decoration: underline;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+        .post-content a:hover {
+            color: #2563eb;
+        }
+        .post-content ul {
+            list-style-position: inside;
+        }
+        .post-content ul li::marker {
+            color: #3d9fc1;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto px-4 py-8 md:py-12 max-w-3xl">
+
+        <!-- Container Principal do Post -->
+        <div class="post-container bg-white rounded-2xl shadow-lg p-6 md:p-10">
+            
+            <!-- Cabeçalho do Post -->
+            <header class="text-center border-b border-gray-200 pb-6 mb-8">
+                <a href="../blog.html" class="inline-block mb-6">
+                    <img id="logo-image" src="../palavrinha.png" alt="Logótipo Palavrinha" class="h-12">
+                </a>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">Palavrinha #5: NUNCA</h1>
+                <p class="post-meta text-gray-500 mt-3">Publicado a 29 de agosto de 2025</p>
+            </header>
+
+            <!-- Conteúdo do Post -->
+            <article class="post-content prose prose-lg max-w-none leading-relaxed">
+                <p class="text-xl text-gray-600">
+                    A palavra de ontem foi <strong>NUNCA</strong>. Um advérbio poderoso que denota uma negação absoluta no tempo. Vamos mergulhar no seu significado e em como esta palavra define limites e impossibilidades.
+                </p>
+
+                <h2 class="text-3xl font-bold mt-8 mb-4">Significado e Origem</h2>
+                <p>
+                    <strong>Nunca</strong> é um advérbio de tempo que significa "em tempo nenhum" ou "jamais". A sua origem vem diretamente do latim <em>nunquam</em>, uma palavra composta pela junção de <em>ne</em> (partícula de negação, "não") e <em>unquam</em> ("alguma vez"). Portanto, a sua etimologia reflete perfeitamente o seu significado: "não alguma vez".
+                </p>
+                
+                <h2 class="text-3xl font-bold mt-8 mb-4">"Nunca" na Cultura Popular</h2>
+                <p>
+                    A palavra "nunca" é frequentemente usada para criar frases de efeito e títulos memoráveis no cinema e na música, sublinhando um desafio ou uma promessa. Um dos exemplos mais famosos é o filme de James Bond de 1983, "Nunca Mais Digas Nunca" (<em>Never Say Never Again</em>), que marcou o regresso de Sean Connery ao papel do espião, depois de ter afirmado que "nunca" mais o interpretaria.
+                </p>
+                 <ul class="space-y-2 my-5 pl-2">
+                    <li><strong>Promessa:</strong> "Eu <strong>nunca</strong> te vou abandonar."</li>
+                    <li><strong>Ordem:</strong> "<strong>Nunca</strong> fales com estranhos."</li>
+                    <li><strong>Expressão:</strong> "Mais vale tarde do que <strong>nunca</strong>."</li>
+                </ul>
+                
+                <figure class="my-8">
+                    <img class="rounded-xl shadow-md mx-auto" src="https://lh3.googleusercontent.com/y1kH6jYOW3OsDTItPxHcHJe2IsExLDJ7EWJiCcA3pzRokEZcqurLk_lQu3HmSZvyUqvBaL_X9CFIDUTggxaSBbaSJt2Oz2U-zAf89HFpXXKBTQIwoqPW7Uft2xs70VR-e5OWp-kaclA" alt="Sinal de proibido, representando a negação absoluta da palavra 'nunca'.">
+                    <figcaption class="text-center text-sm text-gray-500 mt-2">"Nunca" é uma palavra que impõe um limite definitivo.</figcaption>
+                </figure>
+                
+                <p class="text-lg">
+                    Qual foi a coisa mais interessante que prometeste "nunca" fazer e acabaste por fazer?
+                </p>
+            </article>
+            
+            <!-- Footer do Post -->
+            <footer class="text-center mt-10 pt-6 border-t border-gray-200">
+                <a href="../blog.html" class="text-blue-600 font-semibold hover:underline">
+                    ← Voltar ao Blog
+                </a>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Lógica para aplicar o tema (claro/escuro) com base no localStorage
+        document.addEventListener('DOMContentLoaded', () => {
+            const logoImage = document.getElementById('logo-image');
+            if(logoImage) {
+                logoImage.addEventListener('contextmenu', (e) => e.preventDefault());
+
+                const savedTheme = localStorage.getItem('palavrinhaTheme') || 'light';
+                if (savedTheme === 'dark') {
+                    document.body.classList.add('dark-mode');
+                    logoImage.src = '../palavrinha-night.png'; 
+                }
+            }
+        });
+    </script>
+</body>
+</html>
