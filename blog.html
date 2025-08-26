@@ -3,124 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Palavrinha</title>
+    <title>Blog do Palavrinha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --cor-fundo: #ffffff;
-            --cor-texto: #1a1a1b;
-        }
-
-        body.dark-mode {
-            --cor-fundo: #2c2c2e;
-            --cor-texto: #ffffff;
-        }
-
         body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
+            font-family: 'Inter', sans-serif;
             background: linear-gradient(to bottom right, #eb984d, #3d9fc1);
             background-attachment: fixed;
-            color: var(--cor-texto);
+            transition: background-color 0.3s ease;
         }
-
+        /* Estilos para o Modo Escuro */
         body.dark-mode {
             background: linear-gradient(to bottom right, #2c1e4e, #1c3a5e);
-            background-attachment: fixed;
         }
-
-        .container {
-            background-color: var(--cor-fundo);
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            max-width: 800px;
-            margin: 20px auto;
+        body.dark-mode .post-card {
+            background-color: #2c2c2e; /* Cor de fundo do cartão no modo escuro */
         }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 20px;
+        body.dark-mode .post-card h2, body.dark-mode .post-card p {
+            color: #f1f5f9; /* Cor do texto no modo escuro */
         }
-        
-        .header img {
-            width: 250px;
-            height: auto;
-            user-select: none;
-            -webkit-user-drag: none;
+         body.dark-mode .post-card .text-gray-500 {
+            color: #94a3b8; /* Cor da metadata no modo escuro */
         }
-        
-        h1, h2 {
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
+        .post-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
-        .post-list a {
-            text-decoration: none;
-            color: var(--cor-texto);
+        .post-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
-
-        .post-entry {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .post-entry h2 {
-            margin: 0 0 5px 0;
-            font-size: 1.5rem;
-        }
-
-        .post-entry h2:hover {
-            color: #007acc;
-        }
-
-        .post-meta {
-            font-size: 0.9rem;
-            color: #888;
-        }
-
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <a href="index.html" title="Voltar ao Jogo">
-                <img id="logo-image" src="palavrinha.svg" alt="Logótipo Palavrinha">
+<body class="text-gray-800">
+
+    <div class="container mx-auto px-4 py-8 md:py-12 max-w-4xl">
+
+        <!-- Cabeçalho do Blogue -->
+        <header class="text-center mb-12">
+            <a href="index.html" class="inline-block mb-4">
+                <img id="logo-image" src="logo.svg" alt="Logótipo Palavrinha" class="h-16">
             </a>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white text-shadow-lg">Blog do Palavrinha</h1>
+            <p class="text-lg text-white/90 mt-2">Curiosidades, etimologia e a história por detrás das palavrinhas.</p>
+        </header>
+
+        <!-- Grelha de Posts -->
+        <div id="posts-container" class="space-y-8">
+
+            <!-- Cartão do Post 2 (Melga) -->
+            <article class="post-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                <a href="posts/2025-08-26.html" class="block group">
+                    <div class="md:flex">
+                        <div class="md:w-1/3">
+                            <!-- Imagem destacada para o post -->
+                            <img class="h-48 w-full object-cover md:h-full" src="https://placehold.co/400x300/FBBF24/333333?text=Melga" alt="Imagem representativa da palavra Melga">
+                        </div>
+                        <div class="p-6 md:p-8 md:w-2/3">
+                            <p class="text-sm text-gray-500 mb-1">Publicado a 26 de agosto de 2025</p>
+                            <h2 class="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">Palavrinha #2: A Palavra foi MELGA 🇵🇹</h2>
+                            <p class="mt-3 text-gray-600 leading-relaxed">
+                                Se este pequeno inseto (ou pessoa irritante) te deu dores de cabeça, vamos explorar o seu significado, origem e como esta palavra se tornou tão comum no nosso vocabulário.
+                            </p>
+                            <div class="mt-4">
+                                <span class="text-blue-600 font-semibold group-hover:underline">Ler Mais →</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Cartão do Post 1 (Exemplo) -->
+            <article class="post-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                <a href="posts/2025-08-25.html" class="block group">
+                    <div class="md:flex">
+                        <div class="md:w-1/3">
+                             <!-- Imagem destacada para o post -->
+                            <img class="h-48 w-full object-cover md:h-full" src="https://placehold.co/400x300/60A5FA/FFFFFF?text=Fatal" alt="Imagem representativa da palavra Fatal">
+                        </div>
+                        <div class="p-6 md:p-8 md:w-2/3">
+                            <p class="text-sm text-gray-500 mb-1">Publicado a 25 de agosto de 2025</p>
+                            <h2 class="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">Palavrinha #1: A Palavra foi FATAL 🇵🇹</h2>
+                            <p class="mt-3 text-gray-600 leading-relaxed">
+                                Uma palavra com peso e história. Descubra a origem latina de "Fatal" e como o seu significado evoluiu de "destino" para algo com consequências tão drásticas.
+                            </p>
+                            <div class="mt-4">
+                                <span class="text-blue-600 font-semibold group-hover:underline">Ler Mais →</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Adicione mais artigos aqui seguindo o mesmo modelo -->
+
         </div>
-        <h1></h1>
-        <p>Curiosidades, etimologia e a história por detrás das palavrinhas.</p>
 
-        <div class="post-list">
-            <div class="post-entry">
-                <a href="posts/2025-08-25.html">
-                    <h2>Palavrinha #1 (24/08/2025) 🇵🇹</h2>   
-                </a>
-                <div class="post-meta">Publicado a 25 de agosto de 2025</div>
-            </div>
-            <div class="post-entry">
-                <a href="posts/2025-08-26.html">
-                    <h2>Palavrinha #2 (25/08/2025) 🇵🇹</h2>   
-                </a>
-                <div class="post-meta">Publicado a 26 de agosto de 2025</div>
-            </div>
-            </div>
+        <!-- Botão para Voltar ao Jogo -->
+        <footer class="text-center mt-12">
+            <a href="index.html" class="inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-full shadow-md hover:bg-gray-200 transition-all duration-300 transform hover:scale-105">
+                ← Voltar ao Jogo
+            </a>
+        </footer>
 
-        <p><a href="index.html">Voltar ao Jogo</a></p>
     </div>
 
     <script>
-        const logoImage = document.getElementById('logo-image');
-        logoImage.addEventListener('contextmenu', (e) => e.preventDefault());
+        // Lógica para aplicar o tema (claro/escuro) com base no localStorage
+        document.addEventListener('DOMContentLoaded', () => {
+            const logoImage = document.getElementById('logo-image');
+            if(logoImage) {
+                logoImage.addEventListener('contextmenu', (e) => e.preventDefault());
 
-        const savedTheme = localStorage.getItem('palavrinhaTheme') || 'light';
-        if (savedTheme === 'dark') {
-            document.body.classList.add('dark-mode');
-            logoImage.src = 'palavrinha-night.svg';
-        }
+                const savedTheme = localStorage.getItem('palavrinhaTheme') || 'light';
+                if (savedTheme === 'dark') {
+                    document.body.classList.add('dark-mode');
+                    logoImage.src = 'https://jogopalavrinha.com/palavrinha-night.svg';
+                }
+            }
+        });
     </script>
 </body>
 </html>
-
