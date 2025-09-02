@@ -4,40 +4,58 @@
   <!-- Páginas Principais -->
   <url>
     <loc>https://jogopalavrinha.com/</loc>
-    <lastmod>2025-08-30</lastmod> <!-- Atualizar quando houver mudanças significativas no jogo -->
-    <changefreq>daily</changefreq> <!-- O jogo muda diariamente -->
+    <lastmod>2025-08-30</lastmod> <!-- mudar quando fizer alterações significativas ao jogo -->
+    <changefreq>daily</changefreq> 
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://jogopalavrinha.com/blog.html</loc>
-    <lastmod>2025-08-31</lastmod> <!-- Atualizar para a data do último post -->
-    <changefreq>daily</changefreq> <!-- Atualizado com novos posts -->
+    <lastmod>2025-08-31</lastmod> 
+    <changefreq>daily</changefreq> 
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://jogopalavrinha.com/politica-de-privacidade.html</loc>
-    <lastmod>2025-08-18</lastmod> <!-- Data da criação ou última alteração -->
-    <changefreq>yearly</changefreq> <!-- Raramente muda -->
+    <lastmod>2025-08-18</lastmod> 
+    <changefreq>yearly</changefreq>
     <priority>0.70</priority>
   </url>
   <url>
     <loc>https://jogopalavrinha.com/creditos.html</loc>
-    <lastmod>2025-08-18</lastmod> <!-- Data da criação ou última alteração -->
-    <changefreq>yearly</changefreq> <!-- Raramente muda -->
+    <lastmod>2025-08-18</lastmod> 
+    <changefreq>yearly</changefreq> 
     <priority>0.70</priority>
   </url>
   
   <!-- Posts do Blog -->
+    <url>
+    <loc>https://jogopalavrinha.com/posts/2025-09-04.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>never</changefreq> 
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://jogopalavrinha.com/posts/2025-09-03.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>never</changefreq> 
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://jogopalavrinha.com/posts/2025-09-02.html</loc>
+    <lastmod>2025-09-02</lastmod>
+    <changefreq>never</changefreq> 
+    <priority>0.80</priority>
+  </url>
   <url>
     <loc>https://jogopalavrinha.com/posts/2025-09-01.html</loc>
     <lastmod>2025-09-01</lastmod>
-    <changefreq>never</changefreq> <!-- O conteúdo do post não muda -->
+    <changefreq>never</changefreq> 
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://jogopalavrinha.com/posts/2025-08-31.html</loc>
     <lastmod>2025-08-31</lastmod>
-    <changefreq>never</changefreq> <!-- O conteúdo do post não muda -->
+    <changefreq>never</changefreq> 
     <priority>0.80</priority>
   </url>
   <url>
