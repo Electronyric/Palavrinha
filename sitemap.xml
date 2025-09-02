@@ -30,7 +30,7 @@
   <!-- Posts do Blog -->
   <url>
     <loc>https://jogopalavrinha.com/posts/2025-09-01.html</loc>
-    <lastmod>2025-09-01.html</lastmod>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>never</changefreq> <!-- O conteúdo do post não muda -->
     <priority>0.80</priority>
   </url>
