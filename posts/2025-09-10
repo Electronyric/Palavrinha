@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Pedal: Do Pé Romano à Alma do Piano - Blog Palavrinha</title>
+    <meta name="description" content="Descubra a origem da palavra 'Pedal', vinda do latim para 'pé'. Explore como este mecanismo se tornou essencial na música, sendo considerado a 'alma do piano'.">
+    
+    <meta property="og:title" content="A Palavrinha de Ontem: PEDAL" />
+    <meta property="og:description" content="Descubra a origem da palavra 'Pedal', vinda do latim para 'pé'. Explore como este mecanismo se tornou essencial na música, sendo considerado a 'alma do piano'." />
+    <meta property="og:image" content="https://jogopalavrinha.com/images/post-pedal.png" /> <meta property="og:url" content="https://jogopalavrinha.com/posts/2025-09-10.html" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display-swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom right, #eb984d, #3d9fc1);
+            background-attachment: fixed;
+            transition: background-color 0.3s ease;
+        }
+        /* Estilos para o Modo Escuro */
+        body.dark-mode {
+            background: linear-gradient(to bottom right, #2c1e4e, #1c3a5e);
+        }
+        body.dark-mode .post-container {
+            background-color: #2c2c2e;
+            color: #f1f5f9;
+        }
+        body.dark-mode .post-container h1,
+        body.dark-mode .post-container h2 {
+            color: #ffffff;
+        }
+        body.dark-mode .post-container .post-meta {
+            color: #94a3b8;
+        }
+        body.dark-mode .post-container a {
+            color: #60a5fa;
+        }
+        body.dark-mode .post-container blockquote {
+            border-left-color: #60a5fa;
+            background-color: #374151;
+        }
+        .post-content a {
+            text-decoration: underline;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+        .post-content a:hover {
+            color: #2563eb;
+        }
+        .post-content ul {
+            list-style-position: inside;
+        }
+        .post-content ul li::marker {
+            color: #3d9fc1;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto px-4 py-8 md:py-12 max-w-3xl">
+
+        <div class="post-container bg-white rounded-2xl shadow-lg p-6 md:p-10">
+            
+            <header class="text-center border-b border-gray-200 pb-6 mb-8">
+                <a href="../index.html" class="inline-block mb-6">
+                    <img id="logo-image" src="../palavrinha.png" alt="Logótipo Palavrinha" class="h-12">
+                </a>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">Palavrinha #17: PEDAL</h1>
+                <p class="post-meta text-gray-500 mt-3">Publicado a 10 de setembro de 2025</p>
+            </header>
+
+            <article class="post-content prose prose-lg max-w-none leading-relaxed">
+                <p class="text-xl text-gray-600">
+                    A palavra de ontem foi <strong>PEDAL</strong>. É um termo simples, de movimento e força, que descreve a ligação fundamental entre o nosso corpo e as máquinas que criam velocidade, música e arte.
+                </p>
+
+                <h2 class="text-3xl font-bold mt-8 mb-4">A Força que Vem do Pé</h2>
+                <p>
+                    A origem de "pedal" é tão direta quanto a sua função. Vem do latim <em>pedalis</em>, um adjetivo que significa "relativo ao pé", derivado da palavra <em>pes, pedis</em> ("pé"). Um pedal é, na sua essência, uma alavanca movida pelo pé.
+                </p>
+                <p>
+                    Esta invenção simples revolucionou o mundo, permitindo-nos impulsionar veículos como a bicicleta ou controlar máquinas complexas com uma precisão surpreendente.
+                </p>
+                
+                <h2 class="text-3xl font-bold mt-8 mb-4">O Pedal que Deu Alma à Música</h2>
+                <p>
+                    Embora o associemos à bicicleta, é talvez no piano que o pedal encontra a sua expressão mais poética. O pedal de sustentação, o mais usado, é frequentemente chamado de "a alma do piano".
+                </p>
+                <p>
+                    Ao ser pressionado, ele levanta os abafadores das cordas, permitindo que as notas vibrem livremente e se misturem umas com as outras. Este efeito cria uma riqueza de som, uma ressonância e uma profundidade emocional que as teclas sozinhas não conseguem alcançar. Nas mãos de compositores como Chopin ou Debussy, o pedal tornou-se uma ferramenta para pintar paisagens sonoras cheias de cor e sentimento.
+                </p>
+
+                <figure class="my-8">
+                    <img class="rounded-xl shadow-md mx-auto" src="https://images.unsplash.com/photo-1598322484730-e4359a353e6b?q=80&w=1974&auto=format&fit=crop" alt="Close-up dos pedais de latão de um piano de cauda.">
+                    <figcaption class="text-center text-sm text-gray-500 mt-2">Os pedais de um piano, mecanismos que transformam um simples toque de pé em emoção musical.</figcaption>
+                </figure>
+                
+                <p class="text-lg">
+                    A palavra "pedal" ensina-nos que, por vezes, a mais simples extensão do nosso corpo é a chave para desbloquear uma beleza e uma complexidade extraordinárias, seja no movimento de uma bicicleta ou na alma ressonante de um piano.
+                </p>
+            </article>
+            
+            <footer class="text-center mt-10 pt-6 border-t border-gray-200">
+                <a href="../blog.html" class="text-blue-600 font-semibold hover:underline">
+                    ← Voltar ao Blog
+                </a>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Lógica para aplicar o tema (claro/escuro) com base no localStorage
+        document.addEventListener('DOMContentLoaded', () => {
+            const logoImage = document.getElementById('logo-image');
+            if(logoImage) {
+                logoImage.addEventListener('contextmenu', (e) => e.preventDefault());
+
+                const savedTheme = localStorage.getItem('palavrinhaTheme') || 'light';
+                if (savedTheme === 'dark') {
+                    document.body.classList.add('dark-mode');
+                    logoImage.src = 'https://jogopalavrinha.com/palavrinha-night.svg';
+                } else {
+                    logoImage.src = 'https://jogopalavrinha.com/palavrinha.png';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
