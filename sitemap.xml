@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Páginas Principais -->
   <url>
     <loc>https://jogopalavrinha.com/</loc>
-    <lastmod>2025-09-03</lastmod> <!-- mudar quando fizer alterações significativas ao jogo -->
-    <changefreq>daily</changefreq> 
+    <lastmod>2025-09-03</lastmod> <changefreq>daily</changefreq> 
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://jogopalavrinha.com/blog.html</loc>
-    <lastmod>2025-09-09</lastmod> 
+    <lastmod>2025-09-18</lastmod> 
     <changefreq>daily</changefreq> 
     <priority>0.90</priority>
   </url>
@@ -26,37 +24,89 @@
     <changefreq>yearly</changefreq> 
     <priority>0.70</priority>
   </url>
-  
-  <!-- Posts do Blog -->
-
+ 
+  <url>
+    <loc>https://jogopalavrinha.com/posts/2025-09-18.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>never</changefreq> 
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://jogopalavrinha.com/posts/2025-09-17.html</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>never</changefreq> 
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://jogopalavrinha.com/posts/2025-09-16.html</loc>
+    <lastmod>2025-09-16</lastmod>
+    <changefreq>never</changefreq> 
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://jogopalavrinha.com/posts/2025-09-15.html</loc>
+    <lastmod>2025-09-15</lastmod>
+    <changefreq>never</changefreq> 
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://jogopalavrinha.com/posts/2025-09-14.html</loc>
+    <lastmod>2025-09-14</lastmod>
+    <changefreq>never</changefreq> 
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://jogopalavrinha.com/posts/2025-09-13.html</loc>
+    <lastmod>2025-09-13</lastmod>
+    <changefreq>never</changefreq> 
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://jogopalavrinha.com/posts/2025-09-12.html</loc>
+    <lastmod>2025-09-12</lastmod>
+    <changefreq>never</changefreq> 
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://jogopalavrinha.com/posts/2025-09-11.html</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>never</changefreq> 
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://jogopalavrinha.com/posts/2025-09-10.html</loc>
+    <lastmod>2025-09-10</lastmod>
+    <changefreq>never</changefreq> 
+    <priority>0.80</priority>
+  </url>
   <url>
     <loc>https://jogopalavrinha.com/posts/2025-09-09.html</loc>
     <lastmod>2025-09-09</lastmod>
     <changefreq>never</changefreq> 
     <priority>0.80</priority>
   </url>
-  
+ 
   <url>
     <loc>https://jogopalavrinha.com/posts/2025-09-08.html</loc>
     <lastmod>2025-09-08</lastmod>
     <changefreq>never</changefreq> 
     <priority>0.80</priority>
   </url>
-  
+ 
   <url>
     <loc>https://jogopalavrinha.com/posts/2025-09-07.html</loc>
     <lastmod>2025-09-07</lastmod>
     <changefreq>never</changefreq> 
     <priority>0.80</priority>
   </url>
-  
+ 
   <url>
     <loc>https://jogopalavrinha.com/posts/2025-09-06.html</loc>
     <lastmod>2025-09-06</lastmod>
     <changefreq>never</changefreq> 
     <priority>0.80</priority>
   </url>
-  
+ 
   <url>
     <loc>https://jogopalavrinha.com/posts/2025-09-05.html</loc>
     <lastmod>2025-09-05</lastmod>
