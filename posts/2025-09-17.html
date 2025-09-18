@@ -86,4 +86,48 @@
                     Desse choque físico, o significado evoluiu. Passou a descrever qualquer encontro súbito ou colisão ("topar com um obstáculo"), depois um encontro casual ("topei com ele na rua") e, finalmente, chegou ao sentido figurado de aceitar ou concordar com algo ("eu topo a ideia"), como se a nossa mente "encontrasse" e se alinhasse com a proposta.
                 </p>
                 
-                <h2 class="text-3xl font-bold mt-8 mb-
+                <h2 class="text-3xl font-bold mt-8 mb-4">Topar com a Chave de um Império</h2>
+                <p>
+                    Poucos "encontros" na história foram tão fortuitos e monumentais como o que os soldados de Napoleão Bonaparte tiveram no Egito, em 1799. Durante trabalhos de fortificação perto da cidade de Roseta, uma equipa de soldados literalmente <strong>topou com</strong> uma laje de granito escuro, semi-enterrada na areia.
+                </p>
+                <p>
+                    Aquela não era uma pedra qualquer. Era a <strong>Pedra de Roseta</strong>. Nela, estava inscrito o mesmo decreto em três escritas diferentes: hieróglifos egípcios, demótico e grego antigo. Como o grego era conhecido, a pedra tornou-se a chave que permitiu a Jean-François Champollion decifrar os hieróglifos, abrindo uma janela para 3000 anos de história egípcia que estava perdida.
+                </p>
+
+                <figure class="my-8">
+                    <img class="rounded-xl shadow-md mx-auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Rosetta_Stone.JPG/800px-Rosetta_Stone.JPG" alt="A Pedra de Roseta, uma laje de granodiorito escuro coberta com inscrições em três escritas diferentes.">
+                    <figcaption class="text-center text-sm text-gray-500 mt-2">A Pedra de Roseta (196 a.C.), encontrada em 1799. O resultado de 'topar' com a chave que abriu as portas do Antigo Egito.</figcaption>
+                </figure>
+                
+                <p class="text-lg">
+                    Assim, "topar" carrega em si a magia do acaso. É o verbo que descreve a descoberta inesperada que pode mudar o curso da história, provando que, por vezes, a coisa mais importante que podemos fazer é estar atentos àquilo com que tropeçamos pelo caminho.
+                </p>
+            </article>
+            
+            <footer class="text-center mt-10 pt-6 border-t border-gray-200">
+                <a href="../blog.html" class="text-blue-600 font-semibold hover:underline">
+                    ← Voltar ao Blog
+                </a>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Lógica para aplicar o tema (claro/escuro) com base no localStorage
+        document.addEventListener('DOMContentLoaded', () => {
+            const logoImage = document.getElementById('logo-image');
+            if(logoImage) {
+                logoImage.addEventListener('contextmenu', (e) => e.preventDefault());
+
+                const savedTheme = localStorage.getItem('palavrinhaTheme') || 'light';
+                if (savedTheme === 'dark') {
+                    document.body.classList.add('dark-mode');
+                    logoImage.src = 'https://jogopalavrinha.com/palavrinha-night.svg';
+                } else {
+                    logoImage.src = 'https://jogopalavrinha.com/palavrinha.png';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
