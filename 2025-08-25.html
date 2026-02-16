@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Palavra de Ontem: FATAL - Blog Palavrinha</title>
+    <style>
+        :root {
+            --cor-fundo: #ffffff;
+            --cor-texto: #1a1a1b;
+        }
+
+        body.dark-mode {
+            --cor-fundo: #2c2c2e;
+            --cor-texto: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to bottom right, #eb984d, #3d9fc1);
+            background-attachment: fixed;
+            color: var(--cor-texto);
+        }
+
+        body.dark-mode {
+            background: linear-gradient(to bottom right, #2c1e4e, #1c3a5e);
+            background-attachment: fixed;
+        }
+
+        .container {
+            background-color: var(--cor-fundo);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .header img {
+            width: 250px;
+            height: auto;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+        
+        h1, h2 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        
+        .post-content {
+            font-size: 1.1rem;
+        }
+
+        .post-meta {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 30px;
+        }
+
+        .imagem-post {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+            border-radius: 8px; 
+        }
+
+        .voltar-link {
+            margin-top: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="../index.html" title="Voltar ao Jogo">
+                <img id="logo-image" src="../palavrinha.svg" alt="Logótipo Palavrinha">
+            </a>
+        </div>
+        <h1>A Palavra de Ontem: FATAL</h1>
+        <div class="post-meta">Publicado a 25 de agosto de 2025</div>
+
+        <div class="post-content">
+            <p>
+                A palavra de ontem no Palavrinha foi <strong>FATAL</strong>. Se ficaste curioso sobre o seu significado e origem, estás no sítio certo.
+            </p>
+
+            <h2>Significado e Origem da Palavra Fatal</h2>
+            <p>
+                Recorrendo ao <a href="https://dicionario.priberam.org/fatal" target="_blank" rel="noopener noreferrer" title="Ver a definição de 'fatal' no Dicionário Priberam"><strong>Dicionário Priberam da Língua Portuguesa</strong></a>, descobrimos que a nossa palavra <strong>fatal</strong> vem diretamente do adjetivo latino <em>fatalis</em>, que significava "relativo ao destino". 
+            </p>
+            <p>
+                Este, por sua vez, deriva do substantivo <em>fatum</em>, que quer dizer "fado" ou "destino". Portanto, na sua origem mais profunda, algo fatal é aquilo que está predestinado. Com o tempo, a palavra evoluiu, ganhando a forte conotação que conhecemos hoje, ligada a desastres ou à morte.
+            </p>
+            
+            <h2>Como Usar a Palavra "Fatal"</h2>
+            <p>
+                "Fatal" é uma palavra versátil que se aplica em vários contextos para indicar um resultado decisivo e, geralmente, negativo. Aqui ficam alguns exemplos:
+            </p>
+            <ul>
+                <li><strong>Erro fatal:</strong> Uma falha que compromete irreversivelmente um projeto ou sistema.</li>
+                <li><strong>Atração fatal:</strong> Uma paixão perigosa com consequências graves.</li>
+                <li><strong>Desfecho fatal:</strong> O resultado trágico e inevitável de uma situação.</li>
+            </ul>
+
+            <p>
+                Na cultura pop, o "Casamento Vermelho" em <em>Game of Thrones</em> é um exemplo clássico de um evento com consequências <strong>fatais</strong> para muitas personagens, mudando o rumo da história para sempre.
+            </p>
+            
+            <img class="imagem-post" src="https://content.api.news/v3/images/bin/5e55ad15494b8fbf71e7a0f7e60499fe?width=1024" alt="Cena finais do 'Red Wedding'. Retirado do jornal Herald Sun Australia">
+            
+            <p>
+                E tu, lembras-te de usar a palavra "fatal" noutro contexto?
+            </p>
+        </div>
+
+        <p class="voltar-link"><a href="../blog.html">← Voltar ao Blog</a></p>
+    </div>
+
+    <script>
+        const logoImage = document.getElementById('logo-image');
+        logoImage.addEventListener('contextmenu', (e) => e.preventDefault());
+
+        const savedTheme = localStorage.getItem('palavrinhaTheme') || 'light';
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            logoImage.src = '../palavrinha-night.svg';
+        }
+    </script>
+</body>
+</html>
